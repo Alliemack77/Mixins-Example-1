@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.stack {
+    border: solid 2px red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    margin: 5rem auto;
+    padding: 2.5rem;
+}
+
+.card {
+    margin: 2em;
+    max-width: 500px;
+    padding: 2.5em;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .45);
+}
+
+@mixin card--light ($bg-color, $text-color){
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+@mixin card--dark ($bg-color, $text-color){
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.card--light {
+    @include card--light (white, black)
+}
+
+.card--dark {
+    @include card--dark(#333, white)
+}
+
+.card__img {
+    width: 100%;
+    align-self: center;
+}
